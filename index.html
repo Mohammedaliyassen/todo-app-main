@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+  <!-- <link
+    href="https://fonts.googleapis.com/css2?family=Handjet:wght@300&family=Josefin+Sans:wght@400;700&family=Open+Sans&family=Roboto+Condensed:wght@300;700&display=swap"
+    rel="stylesheet"> -->
+
+  <title> Todo app</title>
+
+</head>
+
+<body>
+  <div class="big">
+    <div class="taskContainer">
+      <h1> Todo </h1>
+      <div class="taskInput">
+        <input type="text" placeholder="what would you do ?" id="taskToDo">
+        <button id="addTaskBtn" type="submit" class="addNewTaskBtn">Add</button>
+      </div>
+      <div class="taskBodyCon">
+        <div class="taskBody" id="taskBody">
+
+        </div>
+        <div class="footerTasks">
+          
+          <h6><!-- Add dynamic number --> items left</h6>
+          <h6 class="getAllTasks">All</h6>
+          <h6 class="activeTasks">Active</h6>
+          <h6 class="completedTasks">Completed</h6>
+          <h6 onclick="clearTasks ()">Clear Completed</h6>
+        </div>
+      </div>
+      <h5 class="afterFoot"> Drag and drop to reorder list </h5> 
+    
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>

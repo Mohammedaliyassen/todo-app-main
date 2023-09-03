@@ -1,0 +1,186 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+:root {
+    --Bright-Blue: hsl(220, 98%, 61%);
+    --Check-Background: linear-gradient(45deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    --Very-Dark-BackGround-Blue: hsl(235, 21%, 11%);
+    --Very-Dark-Blue: hsl(235, 24%, 19%);
+    --Light-Grayish-Blue: hsl(234, 39%, 85%);
+    --Lights-Grayish-Blue: hsl(236, 33%, 92%);
+    --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+    --Darks-Grayish-Blue: hsl(233, 14%, 35%);
+    --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+}
+
+body {
+    background-color: var(--Very-Dark-BackGround-Blue);
+}
+
+.big {
+    background: url('../images/bg-desktop-dark.jpg') no-repeat center;
+    max-height: 300px;
+    padding-top: 8%;
+}
+
+.taskContainer {
+    background: transparent;
+    margin: 0 auto;
+    width: 50%;
+    color: var(--Lights-Grayish-Blue);
+}
+
+/* task head start */
+.taskContainer .taskInput, .taskBody, .footerTasks {
+    background: var(--Very-Dark-Blue);
+
+}
+
+.taskContainer .taskInput {
+    margin: 20px 0;
+    height: 50px;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 4px 3px;
+    display: flex;
+}
+
+.taskContainer .taskInput input, .taskInput button {
+    width: 80%;
+    height: 42px;
+    background-color: var(--Very-Dark-Blue);
+    color: var(--Lights-Grayish-Blue);
+    border: none;
+    padding: 0 20px;
+
+}
+
+.taskInput input::placeholder {
+    color: var(--Lights-Grayish-Blue);
+}
+
+.taskInput input:focus {
+    outline: 2px var(--Bright-Blue) solid;
+}
+
+.taskContainer .taskInput button {
+    width: 19.4%;
+    text-align: center;
+    transition: .1s;
+}
+
+.taskContainer .taskInput button:hover {
+    border: 2px var(--Bright-Blue) solid;
+    color: var(--Bright-Blue);
+}
+
+/* task  head end */
+/* task  body start */
+
+
+.taskBodyCon {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.taskBody {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+
+}
+
+.taskBody .tasks,.taskBody .completeTasks {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    border-bottom: 1px var(--Very-Dark-Grayish-Blue) solid;
+}
+
+.taskBody .tasksDrag {
+    background: var(--Very-Dark-Grayish-Blue);
+    opacity: 0.05;
+}
+
+.taskBody .tasksOver {
+    background: var(--Very-Dark-Grayish-Blue);
+    opacity: 0.05;
+}
+
+.taskBody .tasks p,.taskBody .completeTasks p {
+    margin-left: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.taskBody .tasks h3,.taskBody .completeTasks h3 {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+
+/* text done style */
+
+.done {
+    text-decoration: 2px line-through var(--Very-Dark-Grayish-Blue);
+    display: none !important;
+}
+
+.completeTasks {
+    display: flex !important;
+}
+
+.taskEmpty {
+    display: flex;
+    font-weight: 900;
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
+}
+
+.done h3 {
+    display: none;
+}
+
+
+/* task  body end */
+/* task  footer start */
+.footerTasks {
+    display: flex;
+    padding: 30px;
+}
+
+.footerTasks h6 {
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+/* task  footer end */
+/* after footer */
+.afterFoot {
+    text-align: center;
+    padding: 25px;
+}
+
+/* mobile screen */
+
+@media (max-width:700px) {
+    .big {
+        background: url('../images/bg-mobile-dark.jpg') no-repeat center;
+        background-size: cover;
+        max-height: 300px;
+        padding-top: 8%;
+    }
+
+    .taskContainer {
+        background: transparent;
+        margin: 0 auto;
+        width: 90%;
+        color: var(--Lights-Grayish-Blue);
+    }
+}
