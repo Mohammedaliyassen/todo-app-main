@@ -34,7 +34,7 @@ tasksDiv.addEventListener('click', (e) => {
 })
 //create data function
 function addNewTask(taskToDo) {
-    console.log(tasksArray)
+    // console.log(tasksArray)
     //create tasks
     if (taskToDo.value !== '') {
         const task = {
@@ -88,9 +88,8 @@ function taskAdding(tasksArray, typeTask) {
         
         if (task.completed == true) {
             createDiv.classList.toggle('done');
-            tasksArrayActive.push(task)
             checkboxBtn.checked
-            console.log(task)
+            // console.log(task)
         } 
 
     });
@@ -196,9 +195,17 @@ document.querySelector('.getAllTasks').addEventListener('click', () => {
 })
 
 //function for get complete tasks 
+
+tasksArray.map((task)=>{
+    if (task.completed == true) {
+        tasksArrayActive.push(task);
+        // console.log(tasksArrayActive)
+    } 
+})
 document.querySelector('.completedTasks').addEventListener('click', () => {
     
     if (tasksArrayActive.length > 0) {    
+        
         taskAdding(tasksArrayActive, 'completeTasks')
         tasksDiv.classList.remove('taskEmpty')
     } else {
@@ -207,25 +214,6 @@ document.querySelector('.completedTasks').addEventListener('click', () => {
     }
 })
 //function for get number of tasks  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
